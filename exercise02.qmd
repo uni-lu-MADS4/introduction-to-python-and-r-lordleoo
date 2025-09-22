@@ -1,7 +1,7 @@
 ---
 title: "Getting started with R and Python"
 date: 2025-09-22
-author: "Your name"
+author: "Baraa MOHANDES 0252827533"
 format: html
 embed-resources: true
 ---
@@ -17,7 +17,7 @@ embed-resources: true
  - Calculate `2 + 6 * 5 ^ 2`
  
 ```{r}
-# Write answer here
+2 + 6 * 5 ^ 2
 ```
 
 
@@ -32,7 +32,7 @@ Exponentiation
 
 
 ```{r}
-# Write answer here
+(2 + 6) * 5 ^ 2
 ```
  
 
@@ -46,13 +46,14 @@ b = 10
 ```
 
 ```{python}
-# Write answer here
+a,b = b,a
 ```
 
 ### What is the output of the following code?
 
 ```{python}
-# Write answer here
+x = 7
+1 < x < 10 < x + 3 <= 13
 ```
 
 Explain in your words!
@@ -81,8 +82,16 @@ Consider `is.na()` to identify indeces of missing positions.
  * How large is error that you make when ignore missing values?
 
 ```{r}
-# Write answer here
+heights<-c(18, 20, 34, 53, 12, NA, NA, 72, 75, 13)
+heights2 <- replace(heights,is.na(heights),0)
+mean_with_0 <- mean(heights2)
+
+heights3 <- heights[!is.na(heights)]
+mean_wo_na <- mean(heights3)
 ```
+
+The average age is  `r mean_with_0`. After replacing `NA` with 0, the average age becomes `r mean_wo_na`. The error between the two values is `r mean_with_0 - mean_wo_na`
+
 
 ### Create a data frame
 
